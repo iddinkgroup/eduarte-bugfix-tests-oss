@@ -11,11 +11,11 @@ public class SuperOrExtends {
                 .forEach(ref -> updateValues(param1.trigger(ref), Collections.singletonList(ref)));
 
         // Works in 9, fails in 8.u282, remove comments to see that
-//        /* remove me to see fail in 8u282
+        /* remove me to see the next part of the code fail to compile with 8u282
         param2.stream()
                 .map(ref -> (BugTrigger<? extends SuperOrExtends>) ref)
                 .forEach(ref -> updateValuesNoList(param1.trigger(ref), ref));
-//           remove me to see fail in 8u282 */
+           remove me to see the above code fail compiling with 8u282 */
     }
 
     private static class BugTrigger<B> {
